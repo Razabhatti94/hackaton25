@@ -47,7 +47,7 @@ export default function Login() {
                     variant: "destructive",
                 });
             }
-        } catch (error) {
+        } catch {
             toast({
                 title: "Error",
                 description: "Something went wrong. Please try again later.",
@@ -68,7 +68,7 @@ export default function Login() {
                         placeholder="Enter your CNIC"
                         required
                         value={cnic}
-                        onChange={(e) => setCnic(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCnic(e.target.value)}
                     />
                 </div>
                 <div>
@@ -80,7 +80,7 @@ export default function Login() {
                         placeholder="Enter your password"
                         required
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                     />
                 </div>
                 <Button type="submit" className="w-full">
